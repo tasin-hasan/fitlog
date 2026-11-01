@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/shared/navbar/Navbar";
 import Footer from "@/components/shared/footer/Footer";
 import ExerciseProvider from "@/context/ExerciseContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const oswald = Oswald({
   variable: "--font-oswald",
@@ -26,6 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <ExerciseProvider>
           <Navbar />
           <div className="flex-1">{children}</div>
+          <ToastContainer position="bottom-center" autoClose={2000} theme="light"/>
         </ExerciseProvider>
         <Footer></Footer>
       </body>

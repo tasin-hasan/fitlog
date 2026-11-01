@@ -1,3 +1,4 @@
+import Buttons from "@/components/plansavedbuttons/Buttons";
 import { getExerciseData } from "@/lib/getExercises";
 import { IExerciseDataType } from "@/types/exercises.type";
 import Image from "next/image";
@@ -103,17 +104,7 @@ const ExerciseDetailsPage = async ({ params }: IParamsType) => {
           </div>
 
           {/* Action Buttons - UI only */}
-          <div className="flex flex-col sm:flex-row gap-3 pt-2">
-            <button className="btn bg-[#c2f700] text-black border-none hover:bg-[#d5ff36] flex-1">
-              <span><IoToday /></span>
-              Add to today&apos;s plan
-            </button>
-
-            <button className="btn btn-outline border-gray-700 text-gray-300 hover:bg-gray-800 flex-1">
-              <span><IoSaveOutline /></span>
-              Save for later
-            </button>
-          </div>
+          <Buttons exerciseData={exerciseData}></Buttons>
         </div>
       </div>
     </main>

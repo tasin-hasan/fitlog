@@ -9,7 +9,17 @@ export interface IContextType {
    >;
 
    savedExercise: IExerciseDataType[];
-   setSavedExercise: React.Dispatch<React.SetStateAction<IExerciseDataType[]>>
+   setSavedExercise: React.Dispatch<React.SetStateAction<IExerciseDataType[]>>;
+
+   completedExercises: number[];
+   setCompletedExercises: React.Dispatch<
+   React.SetStateAction<number[]>
+   >;
+
+   savedCompleteExercises: number[];
+   setSavedCompletedExercises: React.Dispatch<
+   React.SetStateAction<number[]>
+   >;
 }
 
 
@@ -20,12 +30,19 @@ const ExerciseProvider = ({children}: {children: ReactNode}) => {
     const [planedExercise, setPlanedExercise] = useState<IExerciseDataType[]>([]);
 
     const [savedExercise, setSavedExercise] = useState<IExerciseDataType[]>([]);
+    const [completedExercises, setCompletedExercises] = useState<number[]>([]);
+
+    const [savedCompleteExercises, setSavedCompletedExercises] = useState<number[]>([]);
 
     const sharedData = {
         planedExercise,
         setPlanedExercise,
         savedExercise,
-        setSavedExercise
+        setSavedExercise,
+        completedExercises,
+        setCompletedExercises,
+        savedCompleteExercises,
+        setSavedCompletedExercises
     }
     
     return (
