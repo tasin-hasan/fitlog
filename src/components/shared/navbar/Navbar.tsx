@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/assets/logo.png";
 import NavLinks from "./NavLinks";
+import Navbarbadges from "./Navbarbadges";
 
 const Navbar = () => {
   return (
@@ -47,23 +48,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end flex gap-2 sm:gap-5">
-          <Link href={"/my-plan"}>
-            <div className="flex items-center gap-1 whitespace-nowrap">
-              <p className="text-sm">Plan</p>
-              <p className="text-black bg-[#c2f700] text-sm  rounded-full px-2 ">
-                0
-              </p>
-            </div>
-          </Link>
-
-          <Link href={"/my-plan"}>
-            <div className="flex items-center gap-1 whitespace-nowrap">
-              <p className="text-sm">Saved</p>
-              <p className="text-gray-300 border border-gray-400  rounded-full px-2 text-sm">
-                0
-              </p>
-            </div>
-          </Link>
+          <Navbarbadges></Navbarbadges>
         </div>
       </div>
     </nav>
