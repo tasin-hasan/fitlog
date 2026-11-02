@@ -2,6 +2,7 @@ import Buttons from "@/components/plansavedbuttons/Buttons";
 import { getExerciseData } from "@/lib/getExercises";
 import { IExerciseDataType } from "@/types/exercises.type";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import React from "react";
 import { IoSaveOutline, IoToday } from "react-icons/io5";
 
@@ -21,7 +22,8 @@ const ExerciseDetailsPage = async ({ params }: IParamsType) => {
   );
 
   if (!exerciseData) {
-    return <h2>The data is not found</h2>;
+    // return <h2>The data is not found</h2>;
+    return notFound();
   }
 
   // console.log(exerciseData);

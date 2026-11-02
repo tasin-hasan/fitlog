@@ -12,7 +12,6 @@ const SortBy = ({sortBy, setSortBy}: SortByProps) => {
 
         <select
         value={sortBy}
-          defaultValue="Duration"
           className="select select-sm select-ghost"
           onChange={(e)=> setSortBy(e.target.value)}
         >

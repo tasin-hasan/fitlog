@@ -4,7 +4,7 @@ import React from "react";
 
 const MyPlan = () => {
   return (
-    <div className="max-w-7xl mx-auto my-10 space-y-10">
+     <div className="max-w-7xl mx-auto my-10 px-3 sm:px-4 md:px-6 lg:px-8 space-y-10">
       {/* my plan title and description */}
       <div>
         <h1 className="text-white text-xl text-center font-bold md:text-left md:text-3xl">
@@ -17,7 +17,7 @@ const MyPlan = () => {
 
       <CounterCard />
 
-      <PlanSavedUI></PlanSavedUI>
+      <PlanSavedUI />
     </div>
   );
 };
