@@ -6,9 +6,8 @@ FitLog is a workout management application built with Next.js. It helps users ex
 
 ## 🌐 Live Demo
 
-**Live Website:** [Coming Soon](YOUR_VERCEL_DEPLOYMENT_URL)
+**Live Website:** https://fitlog-sooty-ten.vercel.app/
 
-*The application will be available here after deployment on Vercel.*
 
 ## 🚀 Key Features
 
@@ -75,8 +74,4 @@ You can start editing the page by modifying `src/app/page.tsx`. The page automat
 
 ## 🚀 Deployment
 
-FitLog will be deployed on [Vercel](https://vercel.com/).
-
-After deployment, replace `YOUR_VERCEL_DEPLOYMENT_URL` in the Live Demo section with your actual Vercel URL.
-
-For deployment guidance, see the [Next.js Deployment Documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+Deploy live link: https://fitlog-sooty-ten.vercel.app/
