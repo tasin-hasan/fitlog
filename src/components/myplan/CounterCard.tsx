@@ -3,14 +3,21 @@
 import { ExerciseContext, IContextType } from "@/context/ExerciseContext";
 import { useContext } from "react";
 
-const CounterCard = () => {
+interface CounterCardProps {
+  type: "plan" | "saved";
+}
+
+const CounterCard = ({ type }: CounterCardProps) => {
   const context = useContext(ExerciseContext);
 
   if (!context) {
     throw new Error("Exercise Provider is missing");
   }
 
-  const { planedExercise } = context;
+  const { planedExercise, savedExercise } = context;
+
+  const selectedExercises =
+    type === "plan" ? planedExercise : savedExercise;
 
   return (
     <div className="bg-[#13151c] p-5 sm:p-8 md:p-10 lg:p-15 rounded-2xl">
@@ -22,7 +29,7 @@ const CounterCard = () => {
             Exercises
           </p>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#c2f700]">
-            {planedExercise.length}
+            {selectedExercises.length}
           </h1>
         </div>
 
@@ -32,7 +39,7 @@ const CounterCard = () => {
             Minutes
           </p>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-            {planedExercise.reduce(
+            {selectedExercises.reduce(
               (total, exercise) => total + exercise.duration,
               0,
             )}
@@ -45,7 +52,7 @@ const CounterCard = () => {
             Calories
           </p>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-            {planedExercise.reduce(
+            {selectedExercises.reduce(
               (total, exercise) => total + exercise.caloriesBurned,
               0,
             )}

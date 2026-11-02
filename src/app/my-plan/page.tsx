@@ -15,7 +15,6 @@ const MyPlan = () => {
         </p>
       </div>
 
-      <CounterCard />
 
       <PlanSavedUI />
     </div>
